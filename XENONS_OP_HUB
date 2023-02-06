@@ -1,0 +1,1819 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("XENONS OP SCRIPT HUB", "Ocean")
+
+--main
+local Tab = Window:NewTab("FE SCRIPTS")
+local AnimationSection = Tab:NewSection("Animations")
+local MainSection = Tab:NewSection("FE SCRIPTS")
+
+
+AnimationSection:NewButton("NULLWARE ANIMATIONS", "injects nullware animations hub", function()
+    getgenv().Theme = "Blue" -- To change the UI Theme, set this to one of the following options: "Red", "Purple", "Blue", "Green", "Yellow"
+loadstring(game:HttpGet("https://gist.githubusercontent.com/M6HqVBcddw2qaN4s/2d722888a388017c18028cd434c43a25/raw/dcccf1027fe4b90780e47767aaf584389c9d7771/EULma3fU90PUOKUn?identifier=".. (function()local a=""for b=1,256 do local c=math.random(1,3)a=a..string.char(c==1 and math.random(48,57)or c==2 and math.random(97,122)or c==3 and math.random(65,90))end;return a end)()))()
+end)
+
+MainSection:NewButton("infinite yield", "injects infinite yield", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+MainSection:NewButton("car script", "make you go vroom (can be used with anything)", function()
+    --compatibility for games who change service names
+local Playr = game:GetService("Players")
+local Run = game:GetService("RunService")
+local Core = game:GetService("CoreGui")
+local LocalPlayer = Playr.LocalPlayer
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Lozarth/IreXion-UI-Library/main/IreXion.lua"))()
+
+local Gui = Library:AddGui({
+	Title = {"FE Car", "Made by Xenon"},
+	ThemeColor = Color3.fromRGB(0,91,150),
+	ToggleKey = Enum.KeyCode.RightShift,
+})
+
+local Tab = Gui:AddTab("Main")
+
+local Category = Tab:AddCategory("Main")
+
+local Label = Category:AddLabel("Go into R6 for this script to work.")
+
+local Button = Category:AddButton("Enable FE Car", function()
+	LocalPlayer.Character.Humanoid.WalkSpeed=70 LocalPlayer.Character.Humanoid.JumpPower=0.0001 Float_Height="-1.03" AnimationId="129342287" local a=Instance.new("Animation") a.AnimationId="rbxassetid://"..AnimationId local a=LocalPlayer.Character.Humanoid:LoadAnimation(a) a:Play() a:AdjustSpeed(1) for a,a in pairs(LocalPlayer.Character:GetDescendants())do if a.ClassName=="Part"then a.CustomPhysicalProperties=PhysicalProperties.new(0,0,0)end end local a=1 G=game _=wait p=G:GetService("Players").LocalPlayer.Character p:FindFirstChild("Humanoid").HipHeight=Float_Height _(1.5) t=.4 for a=1,a do repeat p:FindFirstChild("Humanoid").HipHeight=Float_Height-n _(t) p:FindFirstChild("Humanoid").HipHeight=Float_Height+n _(t)until p:FindFirstChild("Humanoid").Health==0 end
+end)
+
+local Category = Tab:AddCategory("Settings")
+
+local Box = Category:AddBox("Slide", function(str)
+	for a,a in pairs(LocalPlayer.Character:GetDescendants())do if a.ClassName=="Part"then a.CustomPhysicalProperties=PhysicalProperties.new(str,0,0)end end 
+end)
+
+local Box = Category:AddBox("Hipheight", function(str)
+	Float_Height=str local a=1 G=game _=wait p=G:GetService("Players").LocalPlayer.Character p:FindFirstChild("Humanoid").HipHeight=Float_Height _(1.5) t=.4 for a=1,a do repeat p:FindFirstChild("Humanoid").HipHeight=Float_Height-n _(t) p:FindFirstChild("Humanoid").HipHeight=Float_Height+n _(t)until p:FindFirstChild("Humanoid").Health==0 end
+end)
+
+local Slider = Category:AddSlider("Walkspeed", 1, 500, 16, function(val)
+	LocalPlayer.Character.Humanoid.WalkSpeed = val
+end)
+
+local Category = Tab:AddCategory("Settings Presets")
+
+local Button = Category:AddButton("Default Car Settings Preset", function()
+	for a,a in pairs(LocalPlayer.Character:GetDescendants())do if a.ClassName=="Part"then a.CustomPhysicalProperties=PhysicalProperties.new(0,0,0)end end
+	LocalPlayer.Character.Humanoid.WalkSpeed = 70
+	Float_Height="-1.03" local a=1 G=game _=wait p=G:GetService("Players").LocalPlayer.Character p:FindFirstChild("Humanoid").HipHeight=Float_Height _(1.5) t=.4 for a=1,a do repeat p:FindFirstChild("Humanoid").HipHeight=Float_Height-n _(t) p:FindFirstChild("Humanoid").HipHeight=Float_Height+n _(t)until p:FindFirstChild("Humanoid").Health==0 end
+end)
+
+local Button = Category:AddButton("Extreme Car Settings Preset", function()
+	for a,a in pairs(LocalPlayer.Character:GetDescendants())do if a.ClassName=="Part"then a.CustomPhysicalProperties=PhysicalProperties.new(0.5,0,0)end end
+	LocalPlayer.Character.Humanoid.WalkSpeed = 500
+	Float_Height="-1.03" local a=1 G=game _=wait p=G:GetService("Players").LocalPlayer.Character p:FindFirstChild("Humanoid").HipHeight=Float_Height _(1.5) t=.4 for a=1,a do repeat p:FindFirstChild("Humanoid").HipHeight=Float_Height-n _(t) p:FindFirstChild("Humanoid").HipHeight=Float_Height+n _(t)until p:FindFirstChild("Humanoid").Health==0 end
+end)
+
+if game.PlaceId == 2041312716 then
+local Tab = Gui:AddTab("Ragdoll Engine")
+
+local Category = Tab:AddCategory("Ragdoll Engine Features")
+local Button = Category:AddButton("Push Aura", function()
+    
+Run.RenderStepped:Connect(function()
+        LocalPlayer.Character.Push.PushEvent:FireServer()
+	end)
+end)
+
+local Label = Category:AddLabel("Useful for flinging people when you hit them with your car")
+local Label = Category:AddLabel("Or just flinging people who come close.")
+local Label = Category:AddLabel("Equip Push tool before clicking to work.")
+
+local Button = Category:AddButton("Anti-Ragdoll", function()
+	LocalPlayer.Character:FindFirstChild("Local Ragdoll"):Destroy()
+end)
+end
+
+local Tab = Gui:AddTab("Discord")
+
+local Category = Tab:AddCategory("Discord")
+
+local Button = Category:AddButton("Join Discord", function()
+    setclipboard("https://discord.gg/VT7sEppfRp")
+    Library:Notify("Invite prompted! If it did not work the invite was copied to your clipboard.")
+    local json = {
+   ["cmd"] = "INVITE_BROWSER",
+   ["args"] = {
+       ["code"] = "VT7sEppfRp"
+   },
+   ["nonce"] = 'a'
+}
+spawn(function()
+   print(syn.request({
+       Url = 'http://127.0.0.1:6463/rpc?v=1',
+       Method = 'POST',
+       Headers = {
+           ['Content-Type'] = 'application/json',
+           ['Origin'] = 'https://discord.com'
+       },
+       Body = game:GetService('HttpService'):JSONEncode(json),
+   }).Body)
+end)
+end)
+
+local Tab = Gui:AddTab("Close")
+
+local Category = Tab:AddCategory("Close")
+
+local Button = Category:AddButton("Close GUI", function()
+	Core["FE Car Made by Xenon"]:Destroy()
+end)
+
+Library:Notify("Join Discord server?", function(bool)
+	if bool == true then
+		setclipboard("https://discord.gg/VT7sEppfRp")
+    Library:Notify("Invite prompted! If it did not work the invite was copied to your clipboard.")
+    local json = {
+   ["cmd"] = "INVITE_BROWSER",
+   ["args"] = {
+       ["code"] = "VT7sEppfRp"
+   },
+   ["nonce"] = 'a'
+}
+spawn(function()
+   print(syn.request({
+       Url = 'http://127.0.0.1:6463/rpc?v=1',
+       Method = 'POST',
+       Headers = {
+           ['Content-Type'] = 'application/json',
+           ['Origin'] = 'https://discord.com'
+       },
+       Body = game:GetService('HttpService'):JSONEncode(json),
+   }).Body)
+end)
+end
+end)
+end)
+
+AnimationSection:NewButton("flip script Z, X, C", "make you gymnast", function()
+    wait(5)
+
+--[[ Info ]]--
+
+local ver = "2.00"
+local scriptname = "feFlip"
+
+
+--[[ Keybinds ]]--
+
+local FrontflipKey = Enum.KeyCode.Z
+local BackflipKey = Enum.KeyCode.X
+local AirjumpKey = Enum.KeyCode.C
+
+
+--[[ Dependencies ]]--
+
+local ca = game:GetService("ContextActionService")
+local zeezy = game:GetService("Players").LocalPlayer
+local h = 0.0174533
+local antigrav
+
+
+--[[ Functions ]]--
+
+function zeezyFrontflip(act,inp,obj)
+	if inp == Enum.UserInputState.Begin then
+		zeezy.Character.Humanoid:ChangeState("Jumping")
+		wait()
+		zeezy.Character.Humanoid.Sit = true
+		for i = 1,360 do 
+			delay(i/720,function()
+			zeezy.Character.Humanoid.Sit = true
+				zeezy.Character.HumanoidRootPart.CFrame = zeezy.Character.HumanoidRootPart.CFrame * CFrame.Angles(-h,0,0)
+			end)
+		end
+		wait(0.55)
+		zeezy.Character.Humanoid.Sit = false
+	end
+end
+
+function zeezyBackflip(act,inp,obj)
+	if inp == Enum.UserInputState.Begin then
+		zeezy.Character.Humanoid:ChangeState("Jumping")
+		wait()
+		zeezy.Character.Humanoid.Sit = true
+		for i = 1,360 do
+			delay(i/720,function()
+			zeezy.Character.Humanoid.Sit = true
+				zeezy.Character.HumanoidRootPart.CFrame = zeezy.Character.HumanoidRootPart.CFrame * CFrame.Angles(h,0,0)
+			end)
+		end
+		wait(0.55)
+		zeezy.Character.Humanoid.Sit = false
+	end
+end
+
+function zeezyAirjump(act,inp,obj)
+	if inp == Enum.UserInputState.Begin then
+		zeezy.Character:FindFirstChildOfClass'Humanoid':ChangeState("Seated")
+		wait()
+		zeezy.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")	
+	end
+end
+
+
+--[[ Binds ]]--
+
+ca:BindAction("zeezyFrontflip",zeezyFrontflip,false,FrontflipKey)
+ca:BindAction("zeezyBackflip",zeezyBackflip,false,BackflipKey)
+ca:BindAction("zeezyAirjump",zeezyAirjump,false,AirjumpKey)
+
+--[[ Load Message ]]--
+
+print(scriptname .. " " .. ver .. " loaded successfully")
+print("made by Zeezy#7203")
+
+local notifSound = Instance.new("Sound",workspace)
+notifSound.PlaybackSpeed = 1.5
+notifSound.Volume = 0.15
+notifSound.SoundId = "rbxassetid://170765130"
+notifSound.PlayOnRemove = true
+notifSound:Destroy()
+game.StarterGui:SetCore("SendNotification", {Title = "feFlip", Text = "feFlip loaded successfully!", Icon = "rbxassetid://505845268", Duration = 5, Button1 = "Okay"})
+end)
+
+AnimationSection:NewButton("goofy ahh animations", "weird shit bruh yous should click it", function()
+save = nil
+c3 = function(r,g,b) return Color3.new(r/255,g/255,b/255) end
+ 
+--do something ro get save file
+ 
+if not save then
+    save = {
+        ui = {
+            highlightcolor = c3(33, 122, 255);
+            errorcolor = c3(255, 0, 0);
+            --AnimationPriority colors
+            core = c3(65, 65, 65);
+            idle = c3(134, 200, 230);
+            movement = c3(114, 230, 121);
+            action = c3(235, 235, 235);
+        };
+        preferences = {
+            
+        };
+        custom_animations = {
+            template = {
+                Title = "";
+                AnimationId = "rbxassetid://";
+                Image = "rbxassetid://2151539455"; --not required
+                Speed = 1;
+                Time = 0;
+                Weight = 1;
+                Loop = false;
+                R6 = true;
+                Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+            };
+        };
+    }
+end
+ 
+lp = game:GetService("Players").LocalPlayer
+m = lp:GetMouse()
+ 
+function getHumanoid()
+    if not lp.Character then return nil end
+    return lp.Character:FindFirstChildWhichIsA("Humanoid")
+end
+ 
+screengui = game:GetObjects("rbxassetid://02159099015")[1]
+screengui.Parent = game:GetService("CoreGui")
+main = screengui.Topbar.Main
+ 
+mainframe = main.MainFrame
+scrollframe = mainframe.ScrollingFrame
+items = scrollframe.Items
+search = scrollframe.SearchFrame.Search
+searchbutton = scrollframe.SearchFrame.ImageLabel.TextButton
+searchframe = scrollframe.SearchFrame
+ 
+preview = main.Preview
+previewimage = preview.Image
+previewtitle = preview.Title
+previewdesc = preview.Desc
+ 
+function draggable(gObj)
+    local UserInputService = game:GetService("UserInputService")
+ 
+    local gui = gObj
+    
+    local dragging
+    local dragInput
+    local dragStart
+    local startPos
+    
+    local function update(input)
+        local delta = input.Position - dragStart
+        gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+    end
+    
+    gui.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+            dragging = true
+            dragStart = input.Position
+            startPos = gui.Position
+            
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    dragging = false
+                end
+            end)
+        end
+    end)
+    
+    gui.InputChanged:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+            dragInput = input
+        end
+    end)
+    
+    UserInputService.InputChanged:Connect(function(input)
+        if input == dragInput and dragging then
+            update(input)
+        end
+    end)
+end
+function tween(object,style,direction,t,goal)
+    local tweenservice = game:GetService("TweenService")
+    local tweenInfo = TweenInfo.new(t,Enum.EasingStyle[style],Enum.EasingDirection[direction])
+    local tween = tweenservice:Create(object,tweenInfo,goal)
+    tween:Play()
+    return tween
+end
+ 
+draggable(screengui.Topbar)
+ 
+function checkIfStudio()
+    return game.Name ~= "Game"
+end
+ 
+if not checkIfStudio() then
+    print'Client is not in Roblox studio'
+    --main.Size = UDim2.new(0.398, 0, 0.477, 0)
+end
+ 
+search.Changed:connect(function(p)
+    local n = 0
+    for i,v in pairs (items:GetChildren()) do
+        if v:IsA("TextButton") and not string.find(v.Title.Text:lower(), search.Text:lower()) then
+            v.Visible = false
+        elseif v:IsA("TextButton") and string.find(v.Title.Text:lower(), search.Text:lower()) then
+            v.Visible = true
+            n = n + 1
+        end
+    end
+    if p == "Text" then
+        if n > 0 then
+            tween(searchframe, "Sine", "Out", 0.25, {
+                BorderColor3 = save.ui.highlightcolor;
+            })
+            wait(0.25)
+            tween(searchframe, "Sine", "In", 0.5, {
+                BorderColor3 = c3(58, 58, 58);
+            })
+        else
+            tween(searchframe, "Sine", "Out", 0.25, {
+                BorderColor3 = save.ui.errorcolor;
+            })
+            wait(0.25)
+            tween(searchframe, "Sine", "In", 0.5, {
+                BorderColor3 = c3(58, 58, 58);
+            })
+        end
+    end
+end)
+ 
+spawn(function()
+    while wait(10) do
+        --auto-save every 10 seconds
+    end
+end)
+ 
+cam = workspace.CurrentCamera
+ 
+running = {}
+popAnims = {
+    armturbine = {
+        Title = "Arm Turbine";
+        AnimationId = "rbxassetid://259438880";
+        Speed = 1.5;
+        Time = 0;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    weirdsway = {
+        Title = "Weird Sway";
+        AnimationId = "rbxassetid://248336677";
+        Speed = 1;
+        Time = 0;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    weirdfloat = {
+        Title = "Weird Float";
+        AnimationId = "rbxassetid://248336459";
+        Speed = 1;
+        Time = 0;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    weirdpose = {
+        Title = "Weird Pose";
+        AnimationId = "rbxassetid://248336163";
+        Speed = 1;
+        Time = 0;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    penguinslide = {
+        Title = "Penguin Slide";
+        AnimationId = "rbxassetid://282574440";
+        Speed = 1;
+        Time = 0;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    scream = {
+        Title = "Scream";
+        AnimationId = "rbxassetid://180611870";
+        Speed = 1.5;
+        Time = 0;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    crouch = {
+        Title = "Crouch";
+        AnimationId = "rbxassetid://182724289";
+        Speed = 1;
+        Time = 0;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    happydance = {
+        Title = "Happy Dance";
+        AnimationId = "rbxassetid://248335946";
+        Speed = 1;
+        Time = 0;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    floatinghead = {
+        Title = "Floating Head";
+        AnimationId = "rbxassetid://121572214";
+        Speed = 1;
+        Time = 0;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    balloonfloat = {
+        Title = "Balloon Float";
+        AnimationId = "rbxassetid://148840371";
+        Speed = 1;
+        Time = 0;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    pinchnose = {
+        Title = "Pinch Nose";
+        AnimationId = "rbxassetid://30235165";
+        Speed = 1;
+        Time = 0;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    goal = {
+        Title = "Goal!";
+        AnimationId = "rbxassetid://28488254";
+        Speed = 1;
+        Time = 0;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    cry = {
+        Title = "Cry";
+        AnimationId = "rbxassetid://180612465";
+        Speed = 0;
+        Time = 1.5;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    partytime = {
+        Title = "Party Time";
+        AnimationId = "rbxassetid://33796059";
+        Speed = 1;
+        Time = 0;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    moondance = {
+        Title = "Moon Dance";
+        AnimationId = "rbxassetid://27789359";
+        Speed = 1;
+        Time = 0;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    insanelegs = {
+        Title = "Insane Legs";
+        AnimationId = "rbxassetid://87986341";
+        Speed = 99;
+        Time = 0;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    rotation = {
+        Title = "Rotation";
+        AnimationId = "rbxassetid://136801964";
+        Speed = 1;
+        Time = 0;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    insanerotation = {
+        Title = "Insane Rotation";
+        AnimationId = "rbxassetid://136801964";
+        Speed = 99;
+        Time = 0;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    roar = {
+        Title = "Roar";
+        AnimationId = "rbxassetid://163209885";
+        Speed = 1;
+        Time = 0;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    spin = {
+        Title = "Spin";
+        AnimationId = "rbxassetid://188632011";
+        Speed = 1;
+        Time = 0;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    zombiearms = {
+        Title = "Zombie Arms";
+        AnimationId = "rbxassetid://183294396";
+        Speed = 0;
+        Time = 0;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    insane = {
+        Title = "Insane";
+        AnimationId = "rbxassetid://33796059";
+        Speed = 99;
+        Time = 0;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    neckbreak = {
+        Title = "Neck Break";
+        AnimationId = "rbxassetid://35154961";
+        Speed = 0;
+        Time = 2;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    headdetach = {
+        Title = "Head Detach";
+        AnimationId = "rbxassetid://35154961";
+        Speed = 0;
+        Time = 3;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    idle = {
+        Title = "Idle";
+        AnimationId = "rbxassetid://180435571";
+        Speed = 1;
+        Time = 0;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+    charleston = {
+        Title = "Charleston";
+        AnimationId = "rbxassetid://429703734";
+        Speed = 1;
+        Time = 0;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+}
+robloxOwns = {}
+ 
+ownerOwns = {}
+ 
+customAnims = {}
+ 
+function getOwnedAnimations(userid)
+    local httpserv = game:GetService("HttpService")
+    local owned = httpserv:GetAsync("https://inventory.roblox.com/v1/users/"..userid.."/inventory/Animation?pageNumber=1&itemsPerPage=10", true)
+    return owned
+end
+ 
+ 
+function getAnim(name)
+    return popAnims[name] or customAnims[name]
+end
+function runAnim(info, humanoid)
+    local animation = Instance.new("Animation")
+    animation.AnimationId = info.AnimationId
+    
+    local animtrack = humanoid:LoadAnimation(animation)
+    table.insert(running,animtrack)
+    animtrack.Priority = info.Priority
+    animtrack.Looped = info.Loop
+    
+    animtrack:Play()
+    animtrack:AdjustSpeed(info.Speed)
+    animtrack:AdjustWeight(info.Weight)
+    animtrack.TimePosition = info.Time
+    
+    animtrack.Stopped:connect(function()
+        for i = 1,#running do
+            if running[i] == animtrack then
+                table.remove(running,i)
+            end
+        end
+    end)
+    
+    return animtrack
+end
+ 
+template = items.Template
+template.Parent = nil
+ 
+function clear()
+    for i,v in pairs (items:GetChildren()) do
+        if v:IsA("TextButton") then
+            v:Destroy()
+        end
+    end
+end
+ 
+--[[
+    idle = {
+        Title = "Idle";
+        AnimationId = "rbxassetid://180435571";
+        Speed = 1;
+        Time = 0;
+        Weight = 1;
+        Loop = true;
+        R6 = true;
+        Priority = 2; --0, 1, 2, and 1000 are acceptable priorities
+    };
+--]]
+ 
+function createbutton(v)
+    local temp = template:Clone()
+    temp.Parent = items
+    temp.Name = v.Title
+    temp.Title.Text = v.Title
+    temp.Image.Image = v.Image or "rbxassetid://2151539455"
+    if temp.Image.Image == "rbxassetid://2151539455" then
+        temp.Image.ImageColor3 = (v.Priority == 0 and save.ui.idle) or (v.Priority == 1 and save.ui.movement) or (v.Priority == 2 and save.ui.action) or (v.Priority == 1000 and save.ui.core)
+    else
+        temp.Image.ImageColor3 = Color3.new(1,1,1)
+    end
+    temp.LayoutOrder = math.random(1,10000)
+    
+    temp.Settings.AnimationId.Value = v.AnimationId
+    temp.Settings.Loop.Value = v.Loop
+    temp.Settings.Priority.Value = v.Priority
+    temp.Settings.R6.Value = v.R6
+    temp.Settings.Speed.Value = v.Speed
+    temp.Settings.Weight.Value = v.Weight
+    temp.Settings.Time.Value = v.Time
+    
+    temp.MouseEnter:connect(function()
+        preview.Title.Text = v.Title
+        preview.Desc.Text = "Speed: "..tostring(v.Speed).."\nPriority: "..tostring(v.Priority).."\nR6 Rig: "..tostring(v.R6).."\nAnimID: "..tostring(v.AnimationId).."\n\n"..(v.Description or "No description provided")
+        
+        preview.Image.Image = v.Image or "rbxassetid://2151539455"
+        if preview.Image.Image == "rbxassetid://2151539455" then
+            preview.Image.ImageColor3 = (v.Priority == 0 and save.ui.idle) or (v.Priority == 1 and save.ui.movement) or (v.Priority == 2 and save.ui.action) or (v.Priority == 1000 and save.ui.core)
+        else
+            preview.Image.ImageColor3 = Color3.new(1,1,1)
+        end
+    end)
+    temp.MouseButton1Click:connect(function()
+        temp.Border.ImageColor3 = save.ui.highlightcolor
+        for i,anim in pairs (running) do
+            if anim.Animation.AnimationId == v.AnimationId then
+                anim:Stop()
+                return
+            end
+        end
+        temp.Border.Visible = true
+        local rAnim = runAnim(v, getHumanoid())
+        rAnim.Stopped:connect(function()
+            temp.Border.Visible = false
+        end)
+    end)
+    
+    return temp
+end
+ 
+dropdown = mainframe.ScrollingFrame.DropdownFrame
+elements = dropdown.HoldContentsFrame.Frame.Elements
+dropdownenabled = true
+ 
+tween(dropdown.HoldContentsFrame.Frame, "Linear", "In", 0, {
+    Position = UDim2.new(0,0,-1,0)
+})
+dropdown.HoldContentsFrame.Frame.Visible = false
+ 
+dropdowndeactivate = screengui.DropdownDeactivate
+dropdowndeactivate.Visible = false
+ 
+function hideddown()
+    tween(dropdown.HoldContentsFrame.Frame, "Linear", "In", 0, {
+        Position = UDim2.new(0,0,-1,0)
+    })
+    dropdown.HoldContentsFrame.Frame.Visible = false
+    dropdowndeactivate.Visible = false
+    dropdownenabled = true
+    
+    for i,e in pairs (elements:GetChildren()) do
+        if e:IsA("TextButton") then
+            e.BackgroundColor3 = c3(46,46,46)
+        end
+    end
+end
+ 
+dropdown.MouseButton1Click:connect(function()
+    print'ddownclick'
+    dropdownenabled = not dropdownenabled
+    if dropdownenabled then
+        hideddown()
+    else
+        tween(dropdown.HoldContentsFrame.Frame, "Linear", "In", 0.3, {
+            Position = UDim2.new(0,0,0,0)
+        })
+        dropdown.HoldContentsFrame.Frame.Visible = true
+        dropdowndeactivate.Visible = true
+    end
+end)
+ 
+dropdowndeactivate.MouseButton1Down:connect(function()
+    hideddown()
+end)
+ 
+for i,v in pairs (elements:GetChildren()) do
+    if v:IsA("TextButton") then
+        v.MouseEnter:connect(function()
+            for i,e in pairs (elements:GetChildren()) do
+                if e:IsA("TextButton") then
+                    e.BackgroundColor3 = c3(46,46,46)
+                end
+            end
+            v.BackgroundColor3 = save.ui.highlightcolor
+        end)
+        v.MouseButton1Click:connect(function()
+            hideddown()
+            dropdown.TextLabel.Text = v.Name
+            sort(v.Name)
+        end)
+    end
+end
+ 
+function sort(category)
+    clear()
+    if category == "Popular" then
+        for i,v in pairs (popAnims) do
+            local temp = createbutton(v)
+        end
+    elseif category == "By Roblox" then
+        
+    end
+end
+ 
+game:GetService('RunService').RenderStepped:connect(function()
+    items.Parent.CanvasSize = UDim2.new(0,0,0,items.GridLayout.AbsoluteContentSize.Y + 50)
+end)
+ 
+sort("Popular")
+end)
+
+--player 
+local Player = Window:NewTab("Player")
+local PlayerSection = Player:NewSection("Player")
+
+PlayerSection:NewSlider("WalkSpeed", "makes your player go deja vu", 500, 16, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+
+PlayerSection:NewSlider("JumpPower", "makes you jump how far you want", 350, 50, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+
+PlayerSection:NewButton("Reset WalkSpeed & JumpPower", "resets your walkspeed and jumppower HOW SIMPLE BRUH", function()
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+
+PlayerSection:NewButton("ESP", "makes you see everyone clear if your blind", function()
+    -- Unnamed ESP
+ 
+assert(Drawing, 'exploit not supported')
+ 
+local UserInputService = game:GetService'UserInputService';
+local HttpService = game:GetService'HttpService';
+local GUIService = game:GetService'GuiService';
+local RunService = game:GetService'RunService';
+local Players = game:GetService'Players';
+local LocalPlayer = Players.LocalPlayer;
+local Camera = workspace.CurrentCamera
+local Mouse = LocalPlayer:GetMouse();
+local Menu = {};
+local MouseHeld = false;
+local LastRefresh = 0;
+local OptionsFile = 'IC3_ESP_SETTINGS.dat';
+local Binding = false;
+local BindedKey = nil;
+local OIndex = 0;
+local LineBox = {};
+local UIButtons = {};
+local Sliders = {};
+local Dragging = false;
+local DraggingUI = false;
+local DragOffset = Vector2.new();
+local DraggingWhat = nil;
+local OldData = {};
+local IgnoreList = {};
+local Red = Color3.new(1, 0, 0);
+local Green = Color3.new(0, 1, 0);
+local MenuLoaded = false;
+ 
+shared.MenuDrawingData = shared.MenuDrawingData or { Instances = {} };
+shared.PlayerData = shared.PlayerData or {};
+shared.RSName = shared.RSName or ('UnnamedESP_by_ic3-' .. HttpService:GenerateGUID(false));
+ 
+local GetDataName = shared.RSName .. '-GetData';
+local UpdateName = shared.RSName .. '-Update';
+ 
+local Debounce = setmetatable({}, {
+__index = function(t, i)
+return rawget(t, i) or false
+end;
+});
+ 
+pcall(function() shared.InputBeganCon:disconnect() end);
+pcall(function() shared.InputEndedCon:disconnect() end);
+ 
+function GetMouseLocation()
+return UserInputService:GetMouseLocation();
+end
+ 
+function MouseHoveringOver(Values)
+local X1, Y1, X2, Y2 = Values[1], Values[2], Values[3], Values[4]
+local MLocation = GetMouseLocation();
+return (MLocation.x >= X1 and MLocation.x <= (X1 + (X2 - X1))) and (MLocation.y >= Y1 and MLocation.y <= (Y1 + (Y2 - Y1)));
+end
+ 
+function GetTableData(t) -- basically table.foreach i dont even know why i made this
+if typeof(t) ~= 'table' then return end
+return setmetatable(t, {
+__call = function(t, func)
+if typeof(func) ~= 'function' then return end;
+for i, v in pairs(t) do
+pcall(func, i, v);
+end
+end;
+});
+end
+local function Format(format, ...)
+return string.format(format, ...);
+end
+function CalculateValue(Min, Max, Percent)
+return Min + math.floor(((Max - Min) * Percent) + .5);
+end
+ 
+local Options = setmetatable({}, {
+__call = function(t, ...)
+local Arguments = {...};
+local Name = Arguments[1];
+OIndex = OIndex + 1; -- (typeof(Arguments[3]) == 'boolean' and 1 or 0);
+rawset(t, Name, setmetatable({
+Name = Arguments[1];
+Text = Arguments[2];
+Value = Arguments[3];
+DefaultValue = Arguments[3];
+AllArgs = Arguments;
+Index = OIndex;
+}, {
+__call = function(t, v)
+if typeof(t.Value) == 'function' then
+t.Value();
+elseif typeof(t.Value) == 'EnumItem' then
+local BT = Menu:GetInstance(Format('%s_BindText', t.Name));
+Binding = true;
+local Val = 0
+while Binding do
+wait();
+Val = (Val + 1) % 17;
+BT.Text = Val <= 8 and '|' or '';
+end
+t.Value = BindedKey;
+BT.Text = tostring(t.Value):match'%w+%.%w+%.(.+)';
+BT.Position = t.BasePosition + Vector2.new(t.BaseSize.X - BT.TextBounds.X - 20, -10);
+else
+local NewValue = v;
+if NewValue == nil then NewValue = not t.Value; end
+rawset(t, 'Value', NewValue);
+if Arguments[2] ~= nil then
+if typeof(Arguments[3]) == 'number' then
+local AMT = Menu:GetInstance(Format('%s_AmountText', t.Name));
+AMT.Text = tostring(t.Value);
+AMT.Position = t.BasePosition + Vector2.new(t.BaseSize.X - AMT.TextBounds.X - 10, -10);
+else
+local Inner = Menu:GetInstance(Format('%s_InnerCircle', t.Name));
+Inner.Visible = t.Value;
+end
+end
+end
+end;
+}));
+end;
+})
+ 
+function Load()
+local _, Result = pcall(readfile, OptionsFile);
+if _ then -- extremely ugly code yea i know but i dont care p.s. i hate pcall
+local _, Table = pcall(HttpService.JSONDecode, HttpService, Result);
+if _ then
+for i, v in pairs(Table) do
+if Options[i] ~= nil and Options[i].Value ~= nil and (typeof(Options[i].Value) == 'boolean' or typeof(Options[i].Value) == 'number') then
+Options[i].Value = v.Value;
+pcall(Options[i], v.Value);
+end
+end
+end
+end
+end
+ 
+Options('Enabled', 'ESP Enabled', true);
+Options('ShowTeam', 'Show Team', false);
+Options('ShowName', 'Show Names', true);
+Options('ShowDistance', 'Show Distance', true);
+Options('ShowHealth', 'Show Health', true);
+Options('ShowBoxes', 'Show Boxes', true);
+Options('ShowTracers', 'Show Tracers', true);
+Options('ShowDot', 'Show Head Dot', false);
+Options('VisCheck', 'Visibility Check', false);
+Options('Crosshair', 'Crosshair', false);
+Options('TextOutline', 'Text Outline', true);
+Options('TextSize', 'Text Size', syn and 18 or 14, 10, 24); -- cuz synapse fonts look weird???
+Options('MaxDistance', 'Max Distance', 2500, 100, 5000);
+Options('RefreshRate', 'Refresh Rate (ms)', 5, 1, 200);
+Options('MenuKey', 'Menu Key', Enum.KeyCode.F4, 1);
+Options('ResetSettings', 'Reset Settings', function()
+for i, v in pairs(Options) do
+if Options[i] ~= nil and Options[i].Value ~= nil and Options[i].Text ~= nil and (typeof(Options[i].Value) == 'boolean' or typeof(Options[i].Value) == 'number') then
+Options[i](Options[i].DefaultValue);
+end
+end
+end, 4);
+Options('LoadSettings', 'Load Settings', Load, 3);
+Options('SaveSettings', 'Save Settings', function()
+writefile(OptionsFile, HttpService:JSONEncode(Options));
+end, 2)
+-- Options.SaveSettings.Value();
+ 
+Load();
+ 
+Options('MenuOpen', nil, true);
+ 
+local function Set(t, i, v)
+t[i] = v;
+end
+local function Combine(...)
+local Output = {};
+for i, v in pairs{...} do
+if typeof(v) == 'table' then
+table.foreach(v, function(i, v)
+Output[i] = v;
+end)
+end
+end
+return Output
+end
+function IsStringEmpty(String)
+if type(String) == 'string' then
+return String:match'^%s+$' ~= nil or #String == 0 or String == '' or false;
+end
+return false
+end
+ 
+function NewDrawing(InstanceName)
+local Instance = Drawing.new(InstanceName);
+return (function(Properties)
+for i, v in pairs(Properties) do
+pcall(Set, Instance, i, v);
+end
+return Instance;
+end)
+end
+ 
+function Menu:AddMenuInstace(Name, Instance)
+if shared.MenuDrawingData.Instances[Name] ~= nil then
+shared.MenuDrawingData.Instances[Name]:Remove();
+end
+shared.MenuDrawingData.Instances[Name] = Instance;
+return Instance;
+end
+function Menu:UpdateMenuInstance(Name)
+local Instance = shared.MenuDrawingData.Instances[Name];
+if Instance ~= nil then
+return (function(Properties)
+for i, v in pairs(Properties) do
+-- print(Format('%s %s -> %s', Name, tostring(i), tostring(v)));
+pcall(Set, Instance, i, v);
+end
+return Instance;
+end)
+end
+end
+function Menu:GetInstance(Name)
+return shared.MenuDrawingData.Instances[Name];
+end
+ 
+function LineBox:Create(Properties)
+local Box = { Visible = true }; -- prevent errors not really though dont worry bout the Visible = true thing
+ 
+local Properties = Combine({
+Transparency = 1;
+Thickness = 1;
+Visible = true;
+}, Properties);
+ 
+Box['TopLeft'] = NewDrawing'Line'(Properties);
+Box['TopRight'] = NewDrawing'Line'(Properties);
+Box['BottomLeft'] = NewDrawing'Line'(Properties);
+Box['BottomRight'] = NewDrawing'Line'(Properties);
+ 
+function Box:Update(CF, Size, Color, Properties)
+if not CF or not Size then return end
+ 
+local TLPos, Visible1 = Camera:WorldToViewportPoint((CF * CFrame.new( Size.X, Size.Y, 0)).p);
+local TRPos, Visible2 = Camera:WorldToViewportPoint((CF * CFrame.new(-Size.X, Size.Y, 0)).p);
+local BLPos, Visible3 = Camera:WorldToViewportPoint((CF * CFrame.new( Size.X, -Size.Y, 0)).p);
+local BRPos, Visible4 = Camera:WorldToViewportPoint((CF * CFrame.new(-Size.X, -Size.Y, 0)).p);
+-- ## BEGIN UGLY CODE
+if Visible1 then
+Box['TopLeft'].Visible = true;
+Box['TopLeft'].Color = Color;
+Box['TopLeft'].From = Vector2.new(TLPos.X, TLPos.Y);
+Box['TopLeft'].To = Vector2.new(TRPos.X, TRPos.Y);
+else
+Box['TopLeft'].Visible = false;
+end
+if Visible2 then
+Box['TopRight'].Visible = true;
+Box['TopRight'].Color = Color;
+Box['TopRight'].From = Vector2.new(TRPos.X, TRPos.Y);
+Box['TopRight'].To = Vector2.new(BRPos.X, BRPos.Y);
+else
+Box['TopRight'].Visible = false;
+end
+if Visible3 then
+Box['BottomLeft'].Visible = true;
+Box['BottomLeft'].Color = Color;
+Box['BottomLeft'].From = Vector2.new(BLPos.X, BLPos.Y);
+Box['BottomLeft'].To = Vector2.new(TLPos.X, TLPos.Y);
+else
+Box['BottomLeft'].Visible = false;
+end
+if Visible4 then
+Box['BottomRight'].Visible = true;
+Box['BottomRight'].Color = Color;
+Box['BottomRight'].From = Vector2.new(BRPos.X, BRPos.Y);
+Box['BottomRight'].To = Vector2.new(BLPos.X, BLPos.Y);
+else
+Box['BottomRight'].Visible = false;
+end
+-- ## END UGLY CODE
+if Properties then
+GetTableData(Properties)(function(i, v)
+pcall(Set, Box['TopLeft'], i, v);
+pcall(Set, Box['TopRight'], i, v);
+pcall(Set, Box['BottomLeft'], i, v);
+pcall(Set, Box['BottomRight'], i, v);
+end)
+end
+end
+function Box:SetVisible(bool)
+pcall(Set, Box['TopLeft'], 'Visible', bool);
+pcall(Set, Box['TopRight'], 'Visible', bool);
+pcall(Set, Box['BottomLeft'], 'Visible', bool);
+pcall(Set, Box['BottomRight'], 'Visible', bool);
+end
+function Box:Remove()
+self:SetVisible(false);
+Box['TopLeft']:Remove();
+Box['TopRight']:Remove();
+Box['BottomLeft']:Remove();
+Box['BottomRight']:Remove();
+end
+ 
+return Box;
+end
+ 
+function CreateMenu(NewPosition) -- Create Menu
+local function FromHex(HEX)
+HEX = HEX:gsub('#', '');
+return Color3.fromRGB(tonumber('0x' .. HEX:sub(1, 2)), tonumber('0x' .. HEX:sub(3, 4)), tonumber('0x' .. HEX:sub(5, 6)));
+end
+ 
+local Colors = {
+Primary = {
+Main = FromHex'424242';
+Light = FromHex'6d6d6d';
+Dark = FromHex'1b1b1b';
+};
+Secondary = {
+Main = FromHex'e0e0e0';
+Light = FromHex'ffffff';
+Dark = FromHex'aeaeae';
+};
+};
+ 
+MenuLoaded = false;
+ 
+GetTableData(UIButtons)(function(i, v)
+v.Instance.Visible = false;
+v.Instance:Remove();
+end)
+GetTableData(Sliders)(function(i, v)
+v.Instance.Visible = false;
+v.Instance:Remove();
+end)
+ 
+UIButtons = {};
+Sliders = {};
+ 
+local BaseSize = Vector2.new(300, 580);
+local BasePosition = NewPosition or Vector2.new(Camera.ViewportSize.X / 8 - (BaseSize.X / 2), Camera.ViewportSize.Y / 2 - (BaseSize.Y / 2));
+ 
+Menu:AddMenuInstace('CrosshairX', NewDrawing'Line'{
+Visible = false;
+Color = Color3.new(0, 1, 0);
+Transparency = 1;
+Thickness = 1;
+});
+Menu:AddMenuInstace('CrosshairY', NewDrawing'Line'{
+Visible = false;
+Color = Color3.new(0, 1, 0);
+Transparency = 1;
+Thickness = 1;
+});
+ 
+delay(.025, function() -- since zindex doesnt exist
+Menu:AddMenuInstace('Main', NewDrawing'Square'{
+Size = BaseSize;
+Position = BasePosition;
+Filled = false;
+Color = Colors.Primary.Main;
+Thickness = 3;
+Visible = true;
+});
+end);
+Menu:AddMenuInstace('TopBar', NewDrawing'Square'{
+Position = BasePosition;
+Size = Vector2.new(BaseSize.X, 25);
+Color = Colors.Primary.Dark;
+Filled = true;
+Visible = true;
+});
+Menu:AddMenuInstace('TopBarTwo', NewDrawing'Square'{
+Position = BasePosition + Vector2.new(0, 25);
+Size = Vector2.new(BaseSize.X, 60);
+Color = Colors.Primary.Main;
+Filled = true;
+Visible = true;
+});
+Menu:AddMenuInstace('TopBarText', NewDrawing'Text'{
+Size = 25;
+Position = shared.MenuDrawingData.Instances.TopBarTwo.Position + Vector2.new(25, 15);
+Text = 'Unnamed ESP';
+Color = Colors.Secondary.Light;
+Visible = true;
+});
+Menu:AddMenuInstace('TopBarTextBR', NewDrawing'Text'{
+Size = 15;
+Position = shared.MenuDrawingData.Instances.TopBarTwo.Position + Vector2.new(BaseSize.X - 65, 40);
+Text = 'by ic3w0lf';
+Color = Colors.Secondary.Dark;
+Visible = true;
+});
+Menu:AddMenuInstace('Filling', NewDrawing'Square'{
+Size = BaseSize - Vector2.new(0, 85);
+Position = BasePosition + Vector2.new(0, 85);
+Filled = true;
+Color = Colors.Secondary.Main;
+Transparency= .5;
+Visible = true;
+});
+ 
+local CPos = 0;
+ 
+GetTableData(Options)(function(i, v)
+if typeof(v.Value) == 'boolean' and not IsStringEmpty(v.Text) and v.Text ~= nil then
+CPos = CPos + 25;
+local BaseSize = Vector2.new(BaseSize.X, 30);
+local BasePosition = shared.MenuDrawingData.Instances.Filling.Position + Vector2.new(30, v.Index * 25 - 10);
+UIButtons[#UIButtons + 1] = {
+Option = v;
+Instance = Menu:AddMenuInstace(Format('%s_Hitbox', v.Name), NewDrawing'Square'{
+Position = BasePosition - Vector2.new(30, 15);
+Size = BaseSize;
+Visible = false;
+});
+};
+Menu:AddMenuInstace(Format('%s_OuterCircle', v.Name), NewDrawing'Circle'{
+Radius = 10;
+Position = BasePosition;
+Color = Colors.Secondary.Light;
+Filled = true;
+Visible = true;
+});
+Menu:AddMenuInstace(Format('%s_InnerCircle', v.Name), NewDrawing'Circle'{
+Radius = 7;
+Position = BasePosition;
+Color = Colors.Secondary.Dark;
+Filled = true;
+Visible = v.Value;
+});
+Menu:AddMenuInstace(Format('%s_Text', v.Name), NewDrawing'Text'{
+Text = v.Text;
+Size = 20;
+Position = BasePosition + Vector2.new(20, -10);
+Visible = true;
+Color = Colors.Primary.Dark;
+});
+end
+end)
+GetTableData(Options)(function(i, v) -- just to make sure certain things are drawn before or after others, too lazy to actually sort table
+if typeof(v.Value) == 'number' then
+CPos = CPos + 25;
+ 
+local BaseSize = Vector2.new(BaseSize.X, 30);
+local BasePosition = shared.MenuDrawingData.Instances.Filling.Position + Vector2.new(0, CPos - 10);
+ 
+local Text = Menu:AddMenuInstace(Format('%s_Text', v.Name), NewDrawing'Text'{
+Text = v.Text;
+Size = 20;
+Position = BasePosition + Vector2.new(20, -10);
+Visible = true;
+Color = Colors.Primary.Dark;
+});
+local AMT = Menu:AddMenuInstace(Format('%s_AmountText', v.Name), NewDrawing'Text'{
+Text = tostring(v.Value);
+Size = 20;
+Position = BasePosition;
+Visible = true;
+Color = Colors.Primary.Dark;
+});
+local Line = Menu:AddMenuInstace(Format('%s_SliderLine', v.Name), NewDrawing'Line'{
+Transparency = 1;
+Color = Colors.Primary.Dark;
+Thickness = 3;
+Visible = true;
+From = BasePosition + Vector2.new(20, 20);
+To = BasePosition + Vector2.new(BaseSize.X - 10, 20);
+});
+CPos = CPos + 10;
+local Slider = Menu:AddMenuInstace(Format('%s_Slider', v.Name), NewDrawing'Circle'{
+Visible = true;
+Filled = true;
+Radius = 6;
+Color = Colors.Secondary.Dark;
+Position = BasePosition + Vector2.new(35, 20);
+})
+ 
+local CSlider = {Slider = Slider; Line = Line; Min = v.AllArgs[4]; Max = v.AllArgs[5]; Option = v};
+Sliders[#Sliders + 1] = CSlider;
+ 
+-- local Percent = (v.Value / CSlider.Max) * 100;
+-- local Size = math.abs(Line.From.X - Line.To.X);
+-- local Value = Size * (Percent / 100); -- this shit's inaccurate but fuck it i'm not even gonna bother fixing it
+ 
+Slider.Position = BasePosition + Vector2.new(40, 20);
+ 
+v.BaseSize = BaseSize;
+v.BasePosition = BasePosition;
+AMT.Position = BasePosition + Vector2.new(BaseSize.X - AMT.TextBounds.X - 10, -10)
+end
+end)
+GetTableData(Options)(function(i, v) -- just to make sure certain things are drawn before or after others, too lazy to actually sort table
+if typeof(v.Value) == 'EnumItem' then
+CPos = CPos + 30;
+ 
+local BaseSize = Vector2.new(BaseSize.X, 30);
+local BasePosition = shared.MenuDrawingData.Instances.Filling.Position + Vector2.new(0, CPos - 10);
+ 
+UIButtons[#UIButtons + 1] = {
+Option = v;
+Instance = Menu:AddMenuInstace(Format('%s_Hitbox', v.Name), NewDrawing'Square'{
+Size = Vector2.new(BaseSize.X, 20) - Vector2.new(30, 0);
+Visible = true;
+Transparency= .5;
+Position = BasePosition + Vector2.new(15, -10);
+Color = Colors.Secondary.Light;
+Filled = true;
+});
+};
+local Text = Menu:AddMenuInstace(Format('%s_Text', v.Name), NewDrawing'Text'{
+Text = v.Text;
+Size = 20;
+Position = BasePosition + Vector2.new(20, -10);
+Visible = true;
+Color = Colors.Primary.Dark;
+});
+local BindText = Menu:AddMenuInstace(Format('%s_BindText', v.Name), NewDrawing'Text'{
+Text = tostring(v.Value):match'%w+%.%w+%.(.+)';
+Size = 20;
+Position = BasePosition;
+Visible = true;
+Color = Colors.Primary.Dark;
+});
+ 
+Options[i].BaseSize = BaseSize;
+Options[i].BasePosition = BasePosition;
+BindText.Position = BasePosition + Vector2.new(BaseSize.X - BindText.TextBounds.X - 20, -10);
+end
+end)
+GetTableData(Options)(function(i, v) -- just to make sure certain things are drawn before or after others, too lazy to actually sort table
+if typeof(v.Value) == 'function' then
+local BaseSize = Vector2.new(BaseSize.X, 30);
+local BasePosition = shared.MenuDrawingData.Instances.Filling.Position + Vector2.new(0, CPos + (25 * v.AllArgs[4]) - 35);
+ 
+UIButtons[#UIButtons + 1] = {
+Option = v;
+Instance = Menu:AddMenuInstace(Format('%s_Hitbox', v.Name), NewDrawing'Square'{
+Size = Vector2.new(BaseSize.X, 20) - Vector2.new(30, 0);
+Visible = true;
+Transparency= .5;
+Position = BasePosition + Vector2.new(15, -10);
+Color = Colors.Secondary.Light;
+Filled = true;
+});
+};
+local Text = Menu:AddMenuInstace(Format('%s_Text', v.Name), NewDrawing'Text'{
+Text = v.Text;
+Size = 20;
+Position = BasePosition + Vector2.new(20, -10);
+Visible = true;
+Color = Colors.Primary.Dark;
+});
+ 
+-- BindText.Position = BasePosition + Vector2.new(BaseSize.X - BindText.TextBounds.X - 10, -10);
+end
+end)
+ 
+delay(.1, function()
+MenuLoaded = true;
+end);
+ 
+-- this has to be at the bottom cuz proto drawing api doesnt have zindex :triumph:
+Menu:AddMenuInstace('Cursor1', NewDrawing'Line'{
+Visible = false;
+Color = Color3.new(1, 0, 0);
+Transparency = 1;
+Thickness = 2;
+});
+Menu:AddMenuInstace('Cursor2', NewDrawing'Line'{
+Visible = false;
+Color = Color3.new(1, 0, 0);
+Transparency = 1;
+Thickness = 2;
+});
+Menu:AddMenuInstace('Cursor3', NewDrawing'Line'{
+Visible = false;
+Color = Color3.new(1, 0, 0);
+Transparency = 1;
+Thickness = 2;
+});
+end
+ 
+CreateMenu();
+ 
+shared.InputBeganCon = UserInputService.InputBegan:connect(function(input)
+if input.UserInputType.Name == 'MouseButton1' and Options.MenuOpen.Value then
+MouseHeld = true;
+local Bar = Menu:GetInstance'TopBar';
+local Values = {
+Bar.Position.X;
+Bar.Position.Y;
+Bar.Position.X + Bar.Size.X;
+Bar.Position.Y + Bar.Size.Y;
+}
+if MouseHoveringOver(Values) and not syn then -- disable dragging for synapse cuz idk why it breaks
+DraggingUI = false; -- also breaks for other exploits
+DragOffset = Menu:GetInstance'Main'.Position - GetMouseLocation();
+else
+for i, v in pairs(Sliders) do
+local Values = {
+v.Line.From.X - (v.Slider.Radius);
+v.Line.From.Y - (v.Slider.Radius);
+v.Line.To.X + (v.Slider.Radius);
+v.Line.To.Y + (v.Slider.Radius);
+};
+if MouseHoveringOver(Values) then
+DraggingWhat = v;
+Dragging = true;
+break
+end
+end
+end
+end
+end)
+shared.InputEndedCon = UserInputService.InputEnded:connect(function(input)
+if input.UserInputType.Name == 'MouseButton1' and Options.MenuOpen.Value then
+MouseHeld = false;
+for i, v in pairs(UIButtons) do
+local Values = {
+v.Instance.Position.X;
+v.Instance.Position.Y;
+v.Instance.Position.X + v.Instance.Size.X;
+v.Instance.Position.Y + v.Instance.Size.Y;
+};
+if MouseHoveringOver(Values) then
+v.Option();
+break -- prevent clicking 2 options
+end
+end
+elseif input.UserInputType.Name == 'Keyboard' then
+if Binding then
+BindedKey = input.KeyCode;
+Binding = false;
+elseif input.KeyCode == Options.MenuKey.Value or (input.KeyCode == Enum.KeyCode.Home and UserInputService:IsKeyDown(Enum.KeyCode.LeftControl)) then
+Options.MenuOpen();
+end
+end
+end)
+ 
+function ToggleMenu()
+if Options.MenuOpen.Value then
+GetTableData(shared.MenuDrawingData.Instances)(function(i, v)
+if OldData[v] then
+pcall(Set, v, 'Visible', true);
+end
+end)
+else
+-- GUIService:SetMenuIsOpen(false);
+GetTableData(shared.MenuDrawingData.Instances)(function(i, v)
+if v.Visible == true then
+OldData[v] = true;
+pcall(Set, v, 'Visible', false);
+end
+end)
+end
+end
+ 
+function CheckRay(Player, Distance, Position, Unit)
+local Pass = true;
+ 
+if Distance > 999 then return false; end
+ 
+local _Ray = Ray.new(Position, Unit * Distance);
+ 
+local List = {LocalPlayer.Character, Camera, Mouse.TargetFilter};
+ 
+for i,v in pairs(IgnoreList) do table.insert(List, v); end;
+ 
+local Hit = workspace:FindPartOnRayWithIgnoreList(_Ray, List);
+if Hit and not Hit:IsDescendantOf(Player.Character) then
+Pass = false;
+if Hit.Transparency >= .3 or not Hit.CanCollide and Hit.ClassName ~= Terrain then -- Detect invisible walls
+IgnoreList[#IgnoreList + 1] = Hit;
+end
+end
+ 
+return Pass;
+end
+ 
+function CheckPlayer(Player)
+if not Options.Enabled.Value then return false end
+ 
+local Pass = true;
+local Distance = 0;
+ 
+if Player ~= LocalPlayer and Player.Character then
+if not Options.ShowTeam.Value and Player.TeamColor == LocalPlayer.TeamColor then
+Pass = false;
+end
+ 
+local Head = Player.Character:FindFirstChild'Head';
+ 
+if Pass and Player.Character and Head then
+Distance = (Camera.CFrame.p - Head.Position).magnitude;
+if Options.VisCheck.Value then
+Pass = CheckRay(Player, Distance, Camera.CFrame.p, (Head.Position - Camera.CFrame.p).unit);
+end
+if Distance > Options.MaxDistance.Value then
+Pass = false;
+end
+end
+else
+Pass = false;
+end
+ 
+return Pass, Distance;
+end
+ 
+function UpdatePlayerData()
+if (tick() - LastRefresh) > (Options.RefreshRate.Value / 1000) then
+LastRefresh = tick();
+for i, v in pairs(Players:GetPlayers()) do
+local Data = shared.PlayerData[v.Name] or { Instances = {} };
+ 
+Data.Instances['Box'] = Data.Instances['Box'] or LineBox:Create{Thickness = 3};
+Data.Instances['Tracer'] = Data.Instances['Tracer'] or NewDrawing'Line'{
+Transparency = 1;
+Thickness = 2;
+}
+Data.Instances['HeadDot'] = Data.Instances['HeadDot'] or NewDrawing'Circle'{
+Filled = true;
+NumSides = 30;
+}
+Data.Instances['NameTag'] = Data.Instances['NameTag'] or NewDrawing'Text'{
+Size = Options.TextSize.Value;
+Center = true;
+Outline = Options.TextOutline.Value;
+Visible = true;
+};
+Data.Instances['DistanceHealthTag'] = Data.Instances['DistanceHealthTag'] or NewDrawing'Text'{
+Size = Options.TextSize.Value - 1;
+Center = true;
+Outline = Options.TextOutline.Value;
+Visible = true;
+};
+ 
+local NameTag = Data.Instances['NameTag'];
+local DistanceTag = Data.Instances['DistanceHealthTag'];
+local Tracer = Data.Instances['Tracer'];
+local HeadDot = Data.Instances['HeadDot'];
+local Box = Data.Instances['Box'];
+ 
+local Pass, Distance = CheckPlayer(v);
+ 
+if Pass and v.Character then
+Data.LastUpdate = tick();
+local Humanoid = v.Character:FindFirstChildOfClass'Humanoid';
+local Head = v.Character:FindFirstChild'Head';
+local HumanoidRootPart = v.Character:FindFirstChild'HumanoidRootPart';
+if v.Character ~= nil and Head then
+local ScreenPosition, Vis = Camera:WorldToViewportPoint(Head.Position);
+if Vis then
+local Color = v.TeamColor == LocalPlayer.TeamColor and Green or Red;
+ 
+local ScreenPositionUpper = Camera:WorldToViewportPoint(Head.CFrame * CFrame.new(0, Head.Size.Y, 0).p);
+local Scale = Head.Size.Y / 2;
+ 
+if Options.ShowName.Value then
+NameTag.Visible = true;
+NameTag.Text = v.Name;
+NameTag.Size = Options.TextSize.Value;
+NameTag.Outline = Options.TextOutline.Value;
+NameTag.Position = Vector2.new(ScreenPositionUpper.X, ScreenPositionUpper.Y);
+NameTag.Color = Color;
+if Drawing.Fonts then -- CURRENTLY SYNAPSE ONLY :MEGAHOLY:
+NameTag.Font = Drawing.Fonts.UI;
+end
+else
+NameTag.Visible = false;
+end
+if Options.ShowDistance.Value or Options.ShowHealth.Value then
+DistanceTag.Visible = true;
+DistanceTag.Size = Options.TextSize.Value - 1;
+DistanceTag.Outline = Options.TextOutline.Value;
+DistanceTag.Color = Color3.new(1, 1, 1);
+if Drawing.Fonts then -- CURRENTLY SYNAPSE ONLY :MEGAHOLY:
+NameTag.Font = Drawing.Fonts.UI;
+end
+ 
+local Str = '';
+ 
+if Options.ShowDistance.Value then
+Str = Str .. Format('[%d] ', Distance);
+end
+if Options.ShowHealth.Value and Humanoid then
+Str = Str .. Format('[%d/100]', Humanoid.Health / Humanoid.MaxHealth * 100);
+end
+ 
+DistanceTag.Text = Str;
+DistanceTag.Position = Vector2.new(ScreenPositionUpper.X, ScreenPositionUpper.Y) + Vector2.new(0, NameTag.Size);
+else
+DistanceTag.Visible = false;
+end
+if Options.ShowDot.Value then
+local Top = Camera:WorldToViewportPoint((Head.CFrame * CFrame.new(0, Scale, 0)).p);
+local Bottom = Camera:WorldToViewportPoint((Head.CFrame * CFrame.new(0, -Scale, 0)).p);
+local Radius = (Top - Bottom).y;
+ 
+HeadDot.Visible = true;
+HeadDot.Color = Color;
+HeadDot.Position = Vector2.new(ScreenPosition.X, ScreenPosition.Y);
+HeadDot.Radius = Radius;
+else
+HeadDot.Visible = false;
+end
+if Options.ShowTracers.Value then
+Tracer.Visible = true;
+Tracer.From = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y);
+Tracer.To = Vector2.new(ScreenPosition.X, ScreenPosition.Y);
+Tracer.Color = Color;
+else
+Tracer.Visible = false;
+end
+if Options.ShowBoxes.Value and HumanoidRootPart then
+Box:Update(HumanoidRootPart.CFrame, Vector3.new(2, 3, 0) * (Scale * 2), Color);
+else
+Box:SetVisible(false);
+end
+else
+NameTag.Visible = false;
+DistanceTag.Visible = false;
+Tracer.Visible = false;
+HeadDot.Visible = false;
+ 
+Box:SetVisible(false);
+end
+end
+else
+NameTag.Visible = false;
+DistanceTag.Visible = false;
+Tracer.Visible = false;
+HeadDot.Visible = false;
+ 
+Box:SetVisible(false);
+end
+ 
+shared.PlayerData[v.Name] = Data;
+end
+end
+end
+ 
+function Update()
+for i, v in pairs(shared.PlayerData) do
+if not Players:FindFirstChild(tostring(i)) then
+GetTableData(v.Instances)(function(i, obj)
+obj.Visible = false;
+obj:Remove();
+v.Instances[i] = nil;
+end)
+shared.PlayerData[i] = nil;
+end
+end
+ 
+local CX = Menu:GetInstance'CrosshairX';
+local CY = Menu:GetInstance'CrosshairY';
+if Options.Crosshair.Value then
+CX.Visible = true;
+CY.Visible = true;
+ 
+CX.To = Vector2.new((Camera.ViewportSize.X / 2) - 8, (Camera.ViewportSize.Y / 2));
+CX.From = Vector2.new((Camera.ViewportSize.X / 2) + 8, (Camera.ViewportSize.Y / 2));
+CY.To = Vector2.new((Camera.ViewportSize.X / 2), (Camera.ViewportSize.Y / 2) - 8);
+CY.From = Vector2.new((Camera.ViewportSize.X / 2), (Camera.ViewportSize.Y / 2) + 8);
+else
+CX.Visible = false;
+CY.Visible = false;
+end
+ 
+if Options.MenuOpen.Value and MenuLoaded then
+local MLocation = GetMouseLocation();
+shared.MenuDrawingData.Instances.Main.Color = Color3.fromHSV(tick() * 24 % 255/255, 1, 1);
+local MainInstance = Menu:GetInstance'Main';
+local Values = {
+MainInstance.Position.X;
+MainInstance.Position.Y;
+MainInstance.Position.X + MainInstance.Size.X;
+MainInstance.Position.Y + MainInstance.Size.Y;
+};
+if MainInstance and MouseHoveringOver(Values) then
+Debounce.CursorVis = true;
+-- GUIService:SetMenuIsOpen(true);
+Menu:UpdateMenuInstance'Cursor1'{
+Visible = true;
+From = Vector2.new(MLocation.x, MLocation.y);
+To = Vector2.new(MLocation.x + 5, MLocation.y + 6);
+}
+Menu:UpdateMenuInstance'Cursor2'{
+Visible = true;
+From = Vector2.new(MLocation.x, MLocation.y);
+To = Vector2.new(MLocation.x, MLocation.y + 8);
+}
+Menu:UpdateMenuInstance'Cursor3'{
+Visible = true;
+From = Vector2.new(MLocation.x, MLocation.y + 6);
+To = Vector2.new(MLocation.x + 5, MLocation.y + 5);
+}
+else
+if Debounce.CursorVis then
+Debounce.CursorVis = false;
+-- GUIService:SetMenuIsOpen(false);
+Menu:UpdateMenuInstance'Cursor1'{Visible = false};
+Menu:UpdateMenuInstance'Cursor2'{Visible = false};
+Menu:UpdateMenuInstance'Cursor3'{Visible = false};
+end
+end
+if MouseHeld then
+if Dragging then
+DraggingWhat.Slider.Position = Vector2.new(math.clamp(MLocation.X, DraggingWhat.Line.From.X, DraggingWhat.Line.To.X), DraggingWhat.Slider.Position.Y);
+local Percent = (DraggingWhat.Slider.Position.X - DraggingWhat.Line.From.X) / ((DraggingWhat.Line.To.X - DraggingWhat.Line.From.X));
+local Value = CalculateValue(DraggingWhat.Min, DraggingWhat.Max, Percent);
+DraggingWhat.Option(Value);
+elseif DraggingUI then
+Debounce.UIDrag = true;
+local Main = Menu:GetInstance'Main';
+local MousePos = GetMouseLocation();
+Main.Position = MousePos + DragOffset;
+end
+else
+Dragging = false;
+if DraggingUI and Debounce.UIDrag then
+Debounce.UIDrag = false;
+DraggingUI = false;
+CreateMenu(Menu:GetInstance'Main'.Position);
+end
+end
+if not Debounce.Menu then
+Debounce.Menu = true;
+ToggleMenu();
+end
+elseif Debounce.Menu and not Options.MenuOpen.Value then
+Debounce.Menu = false;
+ToggleMenu();
+end
+end
+ 
+RunService:UnbindFromRenderStep(GetDataName);
+RunService:UnbindFromRenderStep(UpdateName);
+ 
+RunService:BindToRenderStep(GetDataName, 1, UpdatePlayerData);
+RunService:BindToRenderStep(UpdateName, 1, Update);   
+end)
