@@ -10,6 +10,32 @@ MainSection:NewButton("sans", "fight bruh", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/memeboiyoot/Random-stuff/main/Sans"))()
 end)
 
+MainSection:NewButton("brawler", "made by me XENON!", function()
+-- Methods
+local Methods = loadstring(game:HttpGet("https://raw.githubusercontent.com/coolsk8rboy/The-John-Cena-Factory/main/JohnCenasMain.lua"))()
+-- Setup
+Methods:SetWalkSpeed(30)
+Methods:SetIdleAnimation(10087177636, .1)
+Methods:SetWalkAnimation(10106276390, .1)
+-- Fling
+Methods:BodyPartFlingOnTouch("Right Arm")
+Methods:BodyPartFlingOnTouch("Left Arm")
+Methods:BodyPartFlingOnTouch("Right Leg")
+Methods:BodyPartFlingOnTouch("Left Leg")
+-- Attacks
+Methods:NewAttack("Attack1", "q", 6568699964, .0, 6)
+Methods:NewAttack("Attack2", "z", 7137396917, .0, 6)
+Methods:NewAttack("Attack3", "e", 6573210844, .0, 6)
+-- Finishing up
+Methods:SetScriptCreator("Xenon")
+Methods:SystemMessage([[Controls:
+punch Punch - e
+punch  - z
+Punch - q
+]])
+Methods:RunScript()
+end)
+
 MainSection:NewButton("grandmaster", "fight bruh lol", function()
 -- Methods
 local Methods = loadstring(game:HttpGet("https://raw.githubusercontent.com/coolsk8rboy/The-John-Cena-Factory/main/JohnCenasMain.lua"))()
