@@ -52,7 +52,7 @@ end)
 
 
 
-MainSection:NewButton("KARATE MASTER "MADE BY CROAXER OWNER OF PENDULUM HUB", function()
+MainSection:NewButton("KARATE MASTER", "MADE BY CROAXER OWNER OF PENDULUM HUB", function()
     local Methods = loadstring(game:HttpGet("https://raw.githubusercontent.com/coolsk8rboy/The-John-Cena-Factory/main/JohnCenasMain.lua"))()
 
 Methods:SetIdleAnimation(7142987522, .1)
@@ -86,7 +86,7 @@ end)
 
 
 
-MainSection:NewButton("Assassin "made by Xenon", function()
+MainSection:NewButton("Assassin", "made by Xenon", function()
     local Methods = loadstring(game:HttpGet("https://raw.githubusercontent.com/coolsk8rboy/The-John-Cena-Factory/main/JohnCenasMain.lua"))()
 Methods:SetWalkSpeed(20)
 Methods:SetIdleAnimation(10117955882, .1)
