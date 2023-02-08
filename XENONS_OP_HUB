@@ -50,42 +50,6 @@ Methods:SetScriptCreator("Samzsi#6646")
 Methods:RunScript()
 end)
 
-MainSection:NewButton("GOOFY AH AMONG US SCRIPT", "made by me xenon", function()
-    local Methods = loadstring(game:HttpGet("https://raw.githubusercontent.com/coolsk8rboy/The-John-Cena-Factory/main/JohnCenasMain.lua"))()
-
-Methods:SetWalkSpeed(16)
-
-Methods:BodyPartFlingOnTouch("Head")
-
---Walk + Idle--
-
-Methods:SetIdleAnimation(11574245807, .1)
-Methods:SetWalkAnimation(11574211462, .1)
-
---Amog Attak--
-Methods:NewAttack("Headbutt", "e", 11574347696, .1, 6)
-
---11574424895
-
-
---Dash--
-Methods:OnKeyPress("f", function()
-    Methods:ApplyVelocityFoward(9)
-    Methods:PlayAnimation(11574313444, .1, 2)
-end)
-Methods:OnKeyPress("r", function()
-    Methods:SetIdleAnimation(11574453057, .1)
-    Methods:SetWalkAnimation(11574211462, .1)
-end)
-Methods:OnKeyPress("q", function()
-    Methods:SetIdleAnimation(11574245807, .1)
-    Methods:SetWalkAnimation(11574211462, .1)
-end)
-
-
-
-Methods:RunScript()
-end)
 
 
 MainSection:NewButton("KARATE MASTER "MADE BY CROAXER OWNER OF PENDULUM HUB", function()
