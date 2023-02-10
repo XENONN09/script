@@ -174,7 +174,7 @@ MainSection:NewButton("KARATE MASTER", "MADE BY CROAXER OWNER OF PENDULUM HUB", 
 
 Methods:SetIdleAnimation(7142987522, .1)
 Methods:SetWalkAnimation(7142732585, .1)
-Methods:SetWalkSpeed(8)
+Methods:SetWalkSpeed(40)
 Methods:EnableSprinting(6936452291, .1, 25)
 Methods:BodyPartFlingOnTouch("Right Arm")
 Methods:BodyPartFlingOnTouch("Left Arm")
