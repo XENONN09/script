@@ -247,7 +247,7 @@ MainSection:NewButton("brawler", "made by me XENON!", function()
 -- Methods
 local Methods = loadstring(game:HttpGet("https://raw.githubusercontent.com/coolsk8rboy/The-John-Cena-Factory/main/JohnCenasMain.lua"))()
 -- Setup
-Methods:SetWalkSpeed(30)
+Methods:SetWalkSpeed(50)
 Methods:SetIdleAnimation(10087177636, .1)
 Methods:SetWalkAnimation(10106276390, .1)
 -- Fling
