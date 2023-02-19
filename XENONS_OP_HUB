@@ -9,37 +9,10 @@ local MainSection = Tab:NewSection("FE SCRIPTS")
 
 
 MainSection:NewButton("Bypass Chat (Synapse X)", "is bannable", function()
---[[
-
- __   __   ______     _____     ______     __     ______   ______   ______    
-/\ \ / /  /\  __ \   /\  __-.  /\  == \   /\ \   /\  ___\ /\__  _\ /\  ___\   
-\ \ \'/   \ \  __ \  \ \ \/\ \ \ \  __<   \ \ \  \ \  __\ \/_/\ \/ \ \___  \  
- \ \__|    \ \_\ \_\  \ \____-  \ \_\ \_\  \ \_\  \ \_\      \ \_\  \/\_____\ 
-  \/_/      \/_/\/_/   \/____/   \/_/ /_/   \/_/   \/_/       \/_/   \/_____/ 
-                                                                              
-
-                                       discord.gg/vadrifts
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/vqmpjay/scripts/main/vadriftsbyp'),true))()
+end)
 
 MainSection:NewButton("Bypass Chat (any executor)", "is bannable", function()
-
---[[
- 
- 
- ██▒   █▓ ▄▄▄      ▓█████▄  ██▀███   ██▓  █████▒▄▄▄█████▓  ██████       ▄▄▄▄ ▓██   ██▓ ██▓███  
-▓██░   █▒▒████▄    ▒██▀ ██▌▓██ ▒ ██▒▓██▒▓██   ▒ ▓  ██▒ ▓▒▒██    ▒      ▓█████▄▒██  ██▒▓██░  ██▒
- ▓██  █▒░▒██  ▀█▄  ░██   █▌▓██ ░▄█ ▒▒██▒▒████ ░ ▒ ▓██░ ▒░░ ▓██▄        ▒██▒ ▄██▒██ ██░▓██░ ██▓▒
-  ▒██ █░░░██▄▄▄▄██ ░▓█▄   ▌▒██▀▀█▄  ░██░░▓█▒  ░ ░ ▓██▓ ░   ▒   ██▒     ▒██░█▀  ░ ▐██▓░▒██▄█▓▒ ▒
-   ▒▀█░   ▓█   ▓██▒░▒████▓ ░██▓ ▒██▒░██░░▒█░      ▒██▒ ░ ▒██████▒▒ ██▓ ░▓█  ▀█▓░ ██▒▓░▒██▒ ░  ░
-   ░ ▐░   ▒▒   ▓▒█░ ▒▒▓  ▒ ░ ▒▓ ░▒▓░░▓   ▒ ░      ▒ ░░   ▒ ▒▓▒ ▒ ░ ▒▓▒ ░▒▓███▀▒ ██▒▒▒ ▒▓▒░ ░  ░
-   ░ ░░    ▒   ▒▒ ░ ░ ▒  ▒   ░▒ ░ ▒░ ▒ ░ ░          ░    ░ ░▒  ░ ░ ░▒  ▒░▒   ░▓██ ░▒░ ░▒ ░     
-     ░░    ░   ▒    ░ ░  ░   ░░   ░  ▒ ░ ░ ░      ░      ░  ░  ░   ░    ░    ░▒ ▒ ░░  ░░       
-      ░        ░  ░   ░       ░      ░                         ░    ░   ░     ░ ░              
-     ░              ░                                               ░        ░░ ░                                  
- 
-                                       discord.gg/vadrifts
-
---]]
- 
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/vqmpjay/scripts/main/vadriftsbyp_krnl_fluxus_support'),true))()
 end)
 
@@ -321,18 +294,6 @@ print("What accessories you have on")
 print(v.Name)
 end
 end
-end)
-
-
-
-
-
-
-   If this current version is not functioning as expected, it is recommended that you execute the alternate version that has been 
-       specifically designed to support both Fluxus and KRNL. This version should provide a more stable and effective solution.
---]]
-
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/vqmpjay/scripts/main/vadriftsbyp'),true))()
 end)
 
 
