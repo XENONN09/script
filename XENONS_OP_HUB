@@ -7,16 +7,6 @@ local AnimationSection = Tab:NewSection("Animations")
 local MainSection = Tab:NewSection("FE SCRIPTS")
 
 
-
-MainSection:NewButton("Bypass Chat (Synapse X)", "is bannable", function()
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/vqmpjay/scripts/main/vadriftsbyp'),true))()
-end)
-
-MainSection:NewButton("Bypass Chat (any executor)", "is bannable", function()
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/vqmpjay/scripts/main/vadriftsbyp_krnl_fluxus_support'),true))()
-end)
-
-
 MainSection:NewButton("FE HAT GIVER", "idk", function()
 --[[
 Give hats to people (R15, R6) V2
