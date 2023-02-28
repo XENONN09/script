@@ -5272,6 +5272,10 @@ anims()
 warn("Brutal legend. Made by Supr14")
 end)
 
+AnimationSection:NewButton("R15 ANIMTIONS, PRESS COMMA", "all emotes", function()
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Gi7331/scripts/main/Emote.lua"))()
+end)
+
 
 AnimationSection:NewButton("NULLWARE ANIMATIONS", "injects nullware animations hub", function()
     getgenv().Theme = "Blue" -- To change the UI Theme, set this to one of the following options: "Red", "Purple", "Blue", "Green", "Yellow"
