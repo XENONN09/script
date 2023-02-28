@@ -6,6 +6,15 @@ local Tab = Window:NewTab("FE SCRIPTS")
 local AnimationSection = Tab:NewSection("Animations")
 local MainSection = Tab:NewSection("FE SCRIPTS")
 
+
+MainSection:NewButton("btr roblox", "better roblox", function()
+loadstring(game:HttpGet("https://eternityhub.xyz/HostStuff/JayzRoblox.lua"))()
+end)
+
+
+
+
+
 MainSection:NewButton("ragdoll script", "use at your own safety", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/martinelcrac/cryptonichub/main/Ragdollengine.lua'))()
 end)
